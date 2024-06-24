@@ -5,19 +5,9 @@ from flask import Flask, request, Response
 import os
 
 # Token do Bot no Telegram
-TOKEN = '7415000468:AAFVLpHy4tk62WegMeRXNenaQGEJJLyOAxo'
+TOKEN = os.environ.get('TOKEN')
 
-# # Info about the Bot
-# https://api.telegram.org/bot7415000468:AAFVLpHy4tk62WegMeRXNenaQGEJJLyOAxo/getMe
-        
-# # get updates
-# https://api.telegram.org/bot7415000468:AAFVLpHy4tk62WegMeRXNenaQGEJJLyOAxo/getUpdates
-        
-# # send message
-# # https://api.telegram.org/bot7415000468:AAFVLpHy4tk62WegMeRXNenaQGEJJLyOAxo/sendMessage?chat_id=:566809095&text=Hi you, I am doing good, tks!
 
-# # Webhook
-# https://api.telegram.org/bot7415000468:AAFVLpHy4tk62WegMeRXNenaQGEJJLyOAxo/setWebhook?url=https://4cca00b70b8299.lhr.life 
 
 def send_message( chat_id, text ):
     url = 'https://api.telegram.org/bot{}/'.format( TOKEN )
